@@ -1,0 +1,23 @@
+// src/styles/index.scss
+
+;
+
+@import './Header.scss';
+@import './Hero.scss';
+@import './About.scss';
+@import './Services.scss';
+@import './Portfolio.scss';
+@import './Contact.scss';
+@import './Footer.scss';
+
+
+body {
+  margin: 0;
+  
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
