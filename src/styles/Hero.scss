@@ -1,0 +1,52 @@
+@import "./colors";
+
+.hero {
+  background: url("/public/images/image.png");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 120vh;
+  width: 100%;
+  margin-top: -200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > .container {
+    z-index: 150;
+    height: 50%;
+    width: 60%;
+    z-index: 100;
+    position: relative;
+    top: 15%;
+    font-weight: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+
+    > h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      color: $color4;
+    }
+    > p {
+      font-weight: 400;
+      font-size: 2rem;
+      color: $color4;
+    }
+    > button {
+      width: 20%;
+      height: 12%;
+      color: $color4;
+      font-size: large;
+      border-radius: 10px;
+      margin-top: 3rem;
+      border: 0;
+      outline: none;
+      color: black;
+    }
+  }
+}
