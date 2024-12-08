@@ -6,20 +6,79 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/public/images/fabio-mangione-fs1B0RX4j1o-unsplash.jpg");
+  background: url("/public/images/fabio-mangione-fs1B0RX4j1o-unsplash.jpg") no-repeat center center / cover;
+
   .container {
-    width: 70%;
-    height: 30%;
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    > h2 {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.6); // Dark overlay for better contrast with text
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    h2 {
       margin-bottom: 2rem;
-      font-size: 3rem;
+      font-size: 2.8rem;
+      color: $color4;
+      text-align: center;
     }
-    > ul {
-      font-size: 1.5rem;
+
+    ul {
+      font-size: 1.4rem;
+      color: $color5;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      line-height: 1.8;
+
+      li {
+        margin: 0.5rem 0;
+        transition: transform 0.2s ease, color 0.3s ease;
+
+        &:hover {
+          transform: translateY(-3px);
+          color: lighten($color5, 10%);
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .services {
+    .container {
+      padding: 1.5rem;
+
+      h2 {
+        font-size: 2.4rem;
+      }
+
+      ul {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    .container {
+      padding: 1rem;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      ul {
+        font-size: 1rem;
+      }
     }
   }
 }

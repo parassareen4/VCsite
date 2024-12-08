@@ -6,33 +6,69 @@
   align-items: center;
   background-color: $color4;
   overflow: hidden;
-  > .container {
-    min-width: 50%;
-    height: 60%;
+
+  .container {
+    flex: 1; // Makes it flexible for responsiveness
+    max-width: 600px; // Limits the content width
+    height: auto;
+    padding: 2rem; // Added padding for a cleaner layout
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    > h2 {
+
+    h2 {
       font-size: 2.5rem;
-      font-weight: 400;
+      font-weight: 500;
       color: $color5;
+      margin-bottom: 1rem;
     }
-    > p {
-      font-size: 1.5rem;
+
+    p {
+      font-size: 1.2rem;
       font-weight: 400;
-      text-align: center;
       color: $color5;
-      padding: 2rem;
       text-align: justify;
+      line-height: 1.6;
+      margin: 0;
     }
   }
-  > .imgDiv {
-    min-width: 50%;
-    height: 80%;
-    background: url("/public/images/fabio-mangione-fs1B0RX4j1o-unsplash.jpg");
-    background-repeat: no-repeat;
+
+  .imgDiv {
+    flex: 1; // Flexes to balance with the container
+    height: 100%;
+    background: url("/public/images/fabio-mangione-fs1B0RX4j1o-unsplash.jpg") no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
+
+    @media (max-width: 768px) {
+      background-attachment: scroll; // Fixed background can cause issues on mobile
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    height: auto;
+
+    .container {
+      padding: 1.5rem;
+    }
+
+    .imgDiv {
+      height: 300px; // Adjust height for smaller screens
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      h2 {
+        font-size: 2rem; // Scaled font sizes for mobile
+      }
+      p {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+    }
   }
 }

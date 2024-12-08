@@ -1,7 +1,7 @@
 @import "./colors";
 
 .hero {
-  background: url("/public/images/image.png");
+  background: url("/public/images/image.png") no-repeat center center; // Ensure proper centering
   background-size: cover;
   background-attachment: fixed;
   height: 120vh;
@@ -11,42 +11,95 @@
   justify-content: center;
   align-items: center;
 
-  > .container {
-    z-index: 150;
-    height: 50%;
+  .container {
+    z-index: 150; // Keeps container on top
     width: 60%;
-    z-index: 100;
+    padding: 2rem; // Added padding for spacing
     position: relative;
     top: 15%;
-    font-weight: 20px;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.5); // Slightly darker overlay for better text visibility
+    backdrop-filter: blur(5px); // Enhanced blur effect for modern feel
+    border-radius: 15px; // Added rounded corners for better design
 
-    > h1 {
+    h1 {
       font-size: 3rem;
       font-weight: 600;
       color: $color4;
+      margin-bottom: 1rem;
     }
-    > p {
+
+    p {
+      font-size: 1.5rem; // Reduced font size for better readability
       font-weight: 400;
-      font-size: 2rem;
       color: $color4;
+      margin-bottom: 2rem;
     }
-    > button {
-      width: 20%;
-      height: 12%;
+
+    button {
+      padding: 0.8rem 2rem;
+      font-size: 1.2rem;
+      font-weight: 600;
       color: $color4;
-      font-size: large;
+      background-color: $color2; // Add a contrasting color for the button
+      border: none;
       border-radius: 10px;
-      margin-top: 3rem;
-      border: 0;
-      outline: none;
-      color: black;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: lighten($color2, 10%); // Lighter shade on hover
+        transform: translateY(-3px); // Slight lift on hover
+      }
+
+      &:active {
+        transform: translateY(0); // Reset on click
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .hero {
+    height: auto; // Adjust height for smaller screens
+    margin-top: 0;
+
+    .container {
+      width: 80%;
+      top: 0;
+      padding: 1.5rem;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      button {
+        width: auto;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    .container {
+      width: 90%;
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
     }
   }
 }
