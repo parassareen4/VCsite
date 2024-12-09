@@ -64,3 +64,34 @@
     }
   }
 }
+@media (max-width: 1024px) {
+  .hero{
+    .container {
+      padding: 1.5rem;
+
+      h2 {
+        font-size: 2.4rem;
+      }
+
+      ul {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    .container {
+      padding: 1rem;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      ul {
+        font-size: 1rem;
+      }
+    }
+  }
+}
