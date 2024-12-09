@@ -6,7 +6,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/public/images/image\ copy\ 3.png") no-repeat center center / cover;
+  background: url("/public/images/image\ copy\ 3.png")
+  no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
 
   .container {
     width: 80%;
