@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Portfolio = () => {
   return (
@@ -9,6 +9,7 @@ const Portfolio = () => {
         <ul>
           <li>Company A</li>
           <li>Company B</li>
+          <li>Company C</li>
           <li>Company C</li>
         </ul>
       </div>

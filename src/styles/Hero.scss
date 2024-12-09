@@ -22,7 +22,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); // Slightly darker overlay for better text visibility
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); // Slightly darker overlay for better text visibility
     backdrop-filter: blur(5px); // Enhanced blur effect for modern feel
     border-radius: 15px; // Added rounded corners for better design
 
@@ -41,19 +46,16 @@
     }
 
     button {
-      padding: 0.8rem 2rem;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: $color4;
-      background-color: $color2; // Add a contrasting color for the button
+      width: 12rem;
+      height: 3.5rem;
+      background-color: black;
       border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-
+      font-size: large;
+      border-radius: 5px;
+      transition: 0.1s all;
       &:hover {
-        background-color: lighten($color2, 10%); // Lighter shade on hover
         transform: translateY(-3px); // Slight lift on hover
+        opacity: 0.8;
       }
 
       &:active {
