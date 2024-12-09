@@ -6,7 +6,6 @@
   align-items: center;
   background-color: $color4;
   overflow: hidden;
-
   .container {
     flex: 1; // Makes it flexible for responsiveness
     max-width: 600px; // Limits the content width
@@ -37,7 +36,8 @@
   .imgDiv {
     flex: 1; // Flexes to balance with the container
     height: 100%;
-    background: url("/public/images/fabio-mangione-fs1B0RX4j1o-unsplash.jpg") no-repeat center center;
+    background: url("/public/images/fabio-mangione-fs1B0RX4j1o-unsplash.jpg")
+      no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
 
