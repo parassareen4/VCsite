@@ -12,7 +12,7 @@ const Header = () => {
     <header className="header">
       <div className="container">
         {/* Logo */}
-        <h1 className="logo">VC Firm</h1>
+        <h1 className="logo">The Closers Fund</h1>
 
         {/* Hamburger menu */}
         <div className="hamburger" onClick={toggleMenu}>

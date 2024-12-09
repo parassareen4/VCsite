@@ -6,11 +6,7 @@ const About = () => {
       <div className="container">
         <h2>About Us</h2>
         <p>
-          We are a leading venture capital firm dedicated to fostering
-          innovation and growth. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Laboriosam eius minima repudiandae ea corporis
-          incidunt sed? Aliquid sit mollitia distinctio fugit cupiditate
-          praesentium voluptates ab dolores unde repellat, deleniti magnam?
+        We are a leading venture capital firm specializing in investing in groundbreaking sales software companies. Our mission is to accelerate innovation and drive growth for the next generation of sales technology. We partner with visionary founders and provide the capital, resources, and strategic guidance needed to turn bold ideas into industry-leading solutions. From AI-driven CRMs to sales enablement platforms, we empower companies to transform how the world sells.
         </p>
       </div>
       <div className="imgDiv"></div>
