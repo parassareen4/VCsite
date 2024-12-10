@@ -6,8 +6,8 @@ const Services = () => {
       <div className="container">
         <h2>Our Services</h2>
         <ul>
-          <li>Growth Capital Investments — Fueling growth with strategic capital.</li>
-          <li>Strategic Advisory — Personalized guidance for scaling success.</li>
+          <li>Growth Capital — Fueling growth with smart funding.</li>
+          <li>Strategic Advisory — Scaling with expert guidance.</li>
           <li>Fundraising Support — Raising capital through investor networks.</li>
           <li>Go-to-Market Strategy — Launch, scale, and acquire customers faster.</li>
           <li>Sales Pipeline Optimization — Streamlining deals for higher conversions.</li>

@@ -41,13 +41,19 @@
       line-height: 1.8;
 
       li {
-        margin: 0.5rem 0;
+        margin: 1rem 0;
+        letter-spacing: 2px;
         transition: transform 0.2s ease, color 0.3s ease;
-
+        cursor: pointer;
         &:hover {
           transform: translateY(-3px);
-          color: lighten($color5, 10%);
+          color: lighten($color4, 10%);
+          cursor: pointer;
+          transition: transform 0.2s ease, color 0.3s ease;
+          
         }
+
+       
       }
     }
   }
