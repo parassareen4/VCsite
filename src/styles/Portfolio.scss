@@ -40,6 +40,22 @@
         transition: 0.5s all;
         border-radius: 0 40px 0 40px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        > h2 {
+          font-size: 2rem;
+          font-weight: 600;
+          margin-top: 1rem;
+          color: black;
+        }
+        > img {
+          width:9rem;
+          position: relative;
+          top: 13%;
+          left: 20%;
+          border-radius: 80px;
+        }
         &:hover {
           width: 23%;
         }

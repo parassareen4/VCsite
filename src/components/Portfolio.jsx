@@ -7,10 +7,22 @@ const Portfolio = () => {
         <h2>Our Portfolio</h2>
         <p>Here are some of the innovative companies we have partnered with:</p>
         <ul>
-          <li>Company A</li>
-          <li>Company B</li>
-          <li>Company C</li>
-          <li>Company C</li>
+          <li>
+            <h2>Gong</h2>
+            <img src="public/images/image copy 7.png" alt="Company A" />
+          </li>
+          <li>
+            <h2>Nimble</h2>
+            <img src="public/images/image copy 8.png" alt="Company A" />
+          </li>
+          <li>
+            <h2>Outreach</h2>
+            <img src="public/images/image copy 9.png" alt="Company A" />
+          </li>
+          <li>
+            <h2>Pipedrive</h2>
+            <img src="public/images/image copy 6.png" alt="Company A" />
+          </li>
         </ul>
       </div>
     </section>
