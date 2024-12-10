@@ -2,14 +2,15 @@
 
 .services {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/public/images/image\ copy\ 3.png")
-  no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
+  background: url("/public/images/image\ copy\ 3.png") 
+    no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 2rem 0;
 
   .container {
     width: 80%;
@@ -20,7 +21,7 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.6); // Dark overlay for better contrast with text
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 
@@ -39,95 +40,88 @@
       margin: 0;
       text-align: center;
       line-height: 1.8;
+      width: 100%;
 
       li {
         margin: 1rem 0;
         letter-spacing: 2px;
         transition: transform 0.2s ease, color 0.3s ease;
         cursor: pointer;
+
         &:hover {
           transform: translateY(-3px);
           color: lighten($color4, 10%);
           cursor: pointer;
           transition: transform 0.2s ease, color 0.3s ease;
-          
         }
-
-       
       }
     }
   }
-}
 
-// Responsive Design
-@media (max-width: 1024px) {
-  .services {
-    background-attachment: scroll; // Prevent background issues on tablets
+  // Tablet Styles
+  @media screen and (max-width: 1024px) {
+    background-attachment: scroll; // Disable fixed background on tablets
 
     .container {
-      width: 90%; // Adjust width for better responsiveness
-      padding: 1.5rem; // Add balanced padding
+      width: 90%;
+      padding: 1.5rem;
 
       h2 {
-        font-size: 2.4rem; // Scale heading size
-        margin-bottom: 1.5rem; // Adjust spacing
+        font-size: 2.4rem;
       }
 
       ul {
-        font-size: 1.2rem; // Scale font size
-        line-height: 1.6; // Adjust line spacing for readability
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  // Mobile Styles
+  @media screen and (max-width: 768px) {
+    background-size: cover;
+    background-position: center;
+
+    .container {
+      width: 95%;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.7); // Slightly darker for better readability
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      ul {
+        font-size: 1rem;
+        line-height: 1.6;
 
         li {
-          margin: 0.8rem 0; // Adjust spacing between items
+          margin: 0.8rem 0;
+          letter-spacing: 1px;
         }
       }
     }
   }
-}
 
-@media (max-width: 768px) {
-  .services {
-    height: auto; // Allow height to adjust based on content
-    padding: 2rem 0; // Add vertical padding for spacing
-
+  // Small Mobile Styles
+  @media screen and (max-width: 480px) {
     .container {
-      width: 95%; // Maximize width usage for small screens
-      padding: 1rem; // Compact padding
+      width: 100%;
+      margin: 0 1rem;
+      padding: 1rem;
 
       h2 {
-        font-size: 2rem; // Further reduce heading size
+        font-size: 1.6rem;
         margin-bottom: 1rem;
       }
 
       ul {
-        font-size: 1rem; // Compact font size
-        line-height: 1.4;
+        font-size: 0.9rem;
+        line-height: 1.5;
 
         li {
-          margin: 0.5rem 0; // Compact item spacing
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .services {
-    .container {
-      width: 100%; // Utilize full width
-      padding: 0.8rem; // Minimized padding for very small screens
-
-      h2 {
-        font-size: 1.8rem; // Reduce heading size further
-        margin-bottom: 0.8rem;
-      }
-
-      ul {
-        font-size: 0.9rem; // Smaller font for tight spaces
-        line-height: 1.2;
-
-        li {
-          margin: 0.4rem 0; // Minimized spacing
+          margin: 0.6rem 0;
+          letter-spacing: 0.5px;
         }
       }
     }

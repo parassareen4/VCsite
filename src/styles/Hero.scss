@@ -1,20 +1,22 @@
 @import "./colors";
 
 .hero {
-  background: url("/public/images/image.png") no-repeat center center; // Ensure proper centering
+  background: url("/public/images/image.png") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  height: 120vh;
+  min-height: 120vh;
   width: 100%;
   margin-top: -200px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   .container {
-    z-index: 150; // Keeps container on top
+    z-index: 150;
     width: 60%;
-    padding: 2rem; // Added padding for spacing
+    max-width: 1000px;
+    padding: 2rem;
     position: relative;
     top: 15%;
     text-align: center;
@@ -22,122 +24,140 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(
-      0,
-      0,
-      0,
-      0.5
-    ); // Slightly darker overlay for better text visibility
-    backdrop-filter: blur(5px); // Enhanced blur effect for modern feel
-    border-radius: 15px; // Added rounded corners for better design
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
 
     h1 {
       font-size: 3rem;
       font-weight: 600;
       color: $color4;
       margin-bottom: 1rem;
+      line-height: 1.2;
     }
 
     p {
-      font-size: 1.5rem; // Reduced font size for better readability
+      font-size: 1.5rem;
       font-weight: 400;
       color: $color4;
       margin-bottom: 2rem;
+      max-width: 800px;
     }
 
     button {
       width: 12rem;
       height: 3.5rem;
       background-color: black;
+      color: $color4;
       border: none;
       font-size: large;
       border-radius: 5px;
-      transition: 0.1s all;
+      cursor: pointer;
+      transition: 0.2s all ease;
+
       &:hover {
-        transform: translateY(-3px); // Slight lift on hover
+        transform: translateY(-3px);
         opacity: 0.8;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
       }
 
       &:active {
-        transform: translateY(0); // Reset on click
+        transform: translateY(0);
+        opacity: 1;
       }
     }
   }
-}
-// Responsive rules for smaller screens
-@media (max-width: 1024px) {
-  .hero {
-    height: 100vh; // Reduce height for smaller screens
-    background-attachment: scroll; // Fixed background can cause issues on smaller devices
+
+  // Tablet Styles
+  @media screen and (max-width: 1024px) {
+    min-height: 100vh;
+    background-attachment: scroll;
+    margin-top: -100px;
 
     .container {
-      width: 80%; // Adjust width for better fit
+      width: 80%;
       padding: 1.5rem;
 
       h1 {
-        font-size: 2.4rem; // Adjust heading size for readability
+        font-size: 2.4rem;
       }
 
       p {
-        font-size: 1.2rem; // Scale down font size
+        font-size: 1.2rem;
       }
 
       button {
-        width: 10rem; // Smaller button for tablets
+        width: 10rem;
         height: 3rem;
         font-size: medium;
       }
     }
   }
-}
 
-@media (max-width: 768px) {
-  .hero {
-    height: 90vh; // Further reduce height for mobile devices
+  // Mobile Styles
+  @media screen and (max-width: 768px) {
+    min-height: 90vh;
+    margin-top: -80px;
 
     .container {
-      width: 90%; // Increase flexibility for narrow screens
+      width: 90%;
       padding: 1rem;
-      top: 10%; // Adjust position for better alignment
+      top: 10%;
 
       h1 {
-        font-size: 2rem; // Scale down heading
+        font-size: 2rem;
       }
 
       p {
-        font-size: 1rem; // Smaller font for mobile
+        font-size: 1rem;
       }
 
       button {
-        width: 8rem; // Compact button size
+        width: 8rem;
         height: 2.5rem;
         font-size: small;
       }
     }
   }
-}
 
-@media (max-width: 480px) {
-  .hero {
-    height: 80vh; // Compact height for very small devices
+  // Small Mobile Styles
+  @media screen and (max-width: 480px) {
+    min-height: 80vh;
+    margin-top: -50px;
 
     .container {
-      width: 95%; // Maximize width usage
+      width: 95%;
       padding: 0.8rem;
-      top: 5%; // Adjust for narrow screens
+      top: 5%;
 
       h1 {
-        font-size: 1.8rem; // Further reduce heading size
+        font-size: 1.8rem;
       }
 
       p {
-        font-size: 0.9rem; // Compact font size
+        font-size: 0.9rem;
       }
 
       button {
-        width: 7rem; // Smallest button size
+        width: 7rem;
         height: 2.2rem;
         font-size: 0.9rem;
+      }
+    }
+  }
+
+  // Accessibility and Performance Improvements
+  @media (prefers-reduced-motion: reduce) {
+    background-attachment: scroll;
+
+    .container {
+      button {
+        transition: none;
+
+        &:hover {
+          transform: none;
+          opacity: 1;
+        }
       }
     }
   }
