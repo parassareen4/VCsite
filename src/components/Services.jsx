@@ -6,14 +6,13 @@ const Services = () => {
       <div className="container">
         <h2>Our Services</h2>
         <ul>
-          <li>Growth Capital Investments — Fueling expansion, product development, and market entry with smart capital.</li>
-          <li>Strategic Advisory — Personalized guidance on product development, market positioning, and scaling strategies.</li>
-          <li>Fundraising Support — Hands-on assistance in raising capital from our extensive investor network.</li>
-          <li>Go-to-Market Strategy — Expert guidance to launch, scale, and acquire customers faster.</li>
-          <li>Sales Pipeline Optimization — Streamlining deal cycles and boosting conversions for sustained revenue growth.</li>
-          <li>Partnership & Industry Connections — Access to a powerful network of partners, clients, and strategic buyers.</li>
-          <li>Talent & Recruitment Support — Assistance in hiring top talent to drive growth and execution.</li>
-          <li>Exit & M&A Support — Guidance for acquisitions and exits to achieve the best possible outcome.</li>
+          <li>Growth Capital Investments — Fueling growth with strategic capital.</li>
+          <li>Strategic Advisory — Personalized guidance for scaling success.</li>
+          <li>Fundraising Support — Raising capital through investor networks.</li>
+          <li>Go-to-Market Strategy — Launch, scale, and acquire customers faster.</li>
+          <li>Sales Pipeline Optimization — Streamlining deals for higher conversions.</li>
+          <li>Talent & Recruitment Support — Hiring top talent to drive growth.</li>
+          <li>Exit & M&A Support — Guidance for acquisitions and successful exits.</li>
         </ul>
       </div>
     </section>
