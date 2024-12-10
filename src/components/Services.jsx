@@ -6,13 +6,13 @@ const Services = () => {
       <div className="container">
         <h2>Our Services</h2>
         <ul>
-          <li>Growth Capital — Fueling growth with smart funding.</li>
-          <li>Strategic Advisory — Scaling with expert guidance.</li>
-          <li>Fundraising Support — Raising capital through investor networks.</li>
-          <li>Go-to-Market Strategy — Launch, scale, and acquire customers faster.</li>
-          <li>Sales Pipeline Optimization — Streamlining deals for higher conversions.</li>
-          <li>Talent & Recruitment Support — Hiring top talent to drive growth.</li>
-          <li>Exit & M&A Support — Guidance for acquisitions and successful exits.</li>
+          <li>Growth Capital</li>
+          <li>Strategic Advisory</li>
+          <li>Fundraising Support</li>
+          <li>Go-to-Market Strategy</li>
+          <li>Sales Pipeline Optimization</li>
+          <li>Talent & Recruitment Support</li>
+          <li>Exit & M&A Support</li>
         </ul>
       </div>
     </section>
