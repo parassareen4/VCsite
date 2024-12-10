@@ -9,118 +9,24 @@
 @import "./Contact.scss";
 @import "./Footer.scss";
 
-// Reset and Global Styles
 *,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 16px; // Base font size for responsive typography
-}
-
 body {
   margin: 0;
   padding: 0;
-  background-color: $color5;
+  text-decoration: none;
   color: $color4;
   font-family: "Poppins", sans-serif;
-  line-height: 1.6;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+.hamburger {
+  background-color: black;
+}
+body {
+  background-color: $color5;
 }
 
-// Global Reusable Containers
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
-}
-
-// Typography Helpers
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-// Link Styles
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease;
-
-  &:hover {
-    opacity: 0.8;
-  }
-}
-
-// Button Styles
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
-}
-
-// Responsive Typography
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 12px;
-  }
-}
-
-// Accessibility
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-
-// Scrollbar Styling (Optional, can be customized)
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: lighten($color5, 5%);
-}
-
-::-webkit-scrollbar-thumb {
-  background: $color4;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: darken($color4, 10%);
 }
