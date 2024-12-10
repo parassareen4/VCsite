@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .container {
+  .contain {
     width: 80%;
     height: 80vh;
     background-color: $color5;
@@ -61,5 +61,58 @@
         }
       }
     }
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .contain {
+    width: 90%;
+    padding: 1rem;
+
+    > h2 {
+      font-size: 2rem; // Smaller heading
+    }
+
+    > p {
+      font-size: 0.9rem; // Smaller paragraph text
+    }
+
+    > ul {
+      display: grid; // Use grid for a cleaner 2x2 layout
+      grid-template-columns: repeat(2, 1fr); // Two columns equally spaced
+      gap: 1.5rem; // Space between items
+
+      > li {
+        background-color: $color4;
+        color: black;
+        transition: transform 0.3s ease;
+        text-align: center;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+
+        > img {
+          width: 6rem; // Scale image down
+          height: 6rem;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        > h2 {
+          font-size: 1.4rem; // Scale heading text size
+          margin-top: 0.5rem;
+        }
+      }
+    }
+
+    
+
+      
+    
   }
 }

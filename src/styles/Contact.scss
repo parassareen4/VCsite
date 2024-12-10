@@ -5,10 +5,12 @@
   padding: 4rem 2rem;
   text-align: center;
   background-color: $color5;
-  height: 120vh;
+  height: 100vh; // Automatically adjust height based on content
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column; // Adjust layout for better scaling on smaller screens
+
   h2 {
     font-size: 3rem;
     font-weight: 500;
@@ -17,9 +19,10 @@
   }
 
   .container {
-    max-width: 45%;
+    max-width: 600px; // Limit width for readability
+    width: 90%; // Adjust for smaller screens
     margin: 0 auto;
-    padding: 1rem;
+    padding: 2rem;
     background: $color4; // Card-like effect for the form
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -47,7 +50,9 @@
       padding: 1rem;
       font-size: 1rem;
       border-radius: 5px;
+      border: 1px solid #ddd; // Default border for inputs
       transition: all 0.3s ease;
+
       &:focus {
         border-color: #007bff; // Blue focus border
         box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
@@ -68,10 +73,10 @@
       background-color: $color5;
       margin-top: 2rem;
       border: none;
-      border-radius: 5px;
+      border-radius: 10px;
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.2s ease;
-      border-radius: 10px;
+
       &:hover {
         opacity: 0.9;
         transform: translateY(-2px); // Subtle lift on hover
@@ -86,16 +91,55 @@
 }
 
 // Media Queries for Responsiveness
+@media (max-width: 1024px) {
+  .contact {
+    padding: 3rem 1.5rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .container {
+      padding: 1.5rem;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .contact {
+    height: auto; // Adjust height for text wrapping
     padding: 2rem 1rem;
+
+    h2 {
+      font-size: 2rem;
+    }
 
     .container {
       padding: 1rem;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 1.5rem 0.5rem;
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .container {
+      padding: 0.8rem;
+    }
+
+    form {
+      gap: 1rem;
+
+      button {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+      }
     }
   }
 }

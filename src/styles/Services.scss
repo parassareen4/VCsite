@@ -62,15 +62,24 @@
 // Responsive Design
 @media (max-width: 1024px) {
   .services {
+    background-attachment: scroll; // Prevent background issues on tablets
+
     .container {
-      padding: 1.5rem;
+      width: 90%; // Adjust width for better responsiveness
+      padding: 1.5rem; // Add balanced padding
 
       h2 {
-        font-size: 2.4rem;
+        font-size: 2.4rem; // Scale heading size
+        margin-bottom: 1.5rem; // Adjust spacing
       }
 
       ul {
-        font-size: 1.2rem;
+        font-size: 1.2rem; // Scale font size
+        line-height: 1.6; // Adjust line spacing for readability
+
+        li {
+          margin: 0.8rem 0; // Adjust spacing between items
+        }
       }
     }
   }
@@ -78,15 +87,48 @@
 
 @media (max-width: 768px) {
   .services {
+    height: auto; // Allow height to adjust based on content
+    padding: 2rem 0; // Add vertical padding for spacing
+
     .container {
-      padding: 1rem;
+      width: 95%; // Maximize width usage for small screens
+      padding: 1rem; // Compact padding
 
       h2 {
-        font-size: 2rem;
+        font-size: 2rem; // Further reduce heading size
+        margin-bottom: 1rem;
       }
 
       ul {
-        font-size: 1rem;
+        font-size: 1rem; // Compact font size
+        line-height: 1.4;
+
+        li {
+          margin: 0.5rem 0; // Compact item spacing
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    .container {
+      width: 100%; // Utilize full width
+      padding: 0.8rem; // Minimized padding for very small screens
+
+      h2 {
+        font-size: 1.8rem; // Reduce heading size further
+        margin-bottom: 0.8rem;
+      }
+
+      ul {
+        font-size: 0.9rem; // Smaller font for tight spaces
+        line-height: 1.2;
+
+        li {
+          margin: 0.4rem 0; // Minimized spacing
+        }
       }
     }
   }

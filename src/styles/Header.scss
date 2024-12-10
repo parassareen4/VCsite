@@ -108,22 +108,110 @@
 }
 
 // Responsive rules for smaller screens
-@media (max-width: 768px) {
-  .header > .container > ul {
-    display: none; // Hide menu on small devices
-  }
+@media (max-width: 1024px) {
+  .header {
+    margin-top: 1rem;
+    height: 12vh;
 
-  .header > .container > .hamburger {
-    display: block; // Show hamburger icon on small devices
-  }
+    > .container {
+      padding: 0 1.5rem;
 
-  .nav-menu.open {
-    display: flex; // Dropdown menu appears only when toggled
+      > .logo {
+        font-size: 2rem; // Slightly smaller logo for tablets
+      }
+
+      > ul {
+        width: 60%; // Adjust width for better alignment
+      }
+
+      > .hamburger {
+        font-size: 2rem; // Slightly larger for better accessibility
+      }
+    }
   }
 }
 
-/* Hamburger menu icon */
-.icon {
-  color: black; // Set icon color to black
-  background-color: black;
+@media (max-width: 768px) {
+  .header {
+    height: 10vh; // Reduce height for mobile devices
+
+    > .container {
+      padding: 0 1rem;
+
+      > .logo {
+        font-size: 1.8rem; // Further reduce font size for smaller screens
+      }
+
+      > ul {
+        display: none; // Hide the full menu
+      }
+
+      > .hamburger {
+        padding: 0.2rem; 
+        margin-right: 1rem; // Add spacing for better alignment
+        font-size: 2rem; // Adjust icon size for smaller screens
+        border-radius: 50px;// Adjust spacing for better alignment
+        display: block; 
+        
+        background-color: black;
+        color: black; // Maintain readability
+      }
+    }
+
+    .nav-menu {
+      position: absolute;
+      top: 10vh; // Adjust to align with reduced header height
+      padding: 1rem 0;
+      transform: translateY(-100%);
+      background-color: $color4;
+      transition: transform 0.3s ease;
+
+      &.open {
+        transform: translateY(0);
+        display: flex; // Ensure visibility when toggled
+        flex-direction: column;
+        align-items: center;
+        z-index: 999;
+      }
+
+      > li {
+        margin: 0.8rem 0;
+
+        > a {
+          font-size: 1.3rem; // Reduce font size for smaller screens
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 8vh; // Compact height for very small devices
+
+    > .container {
+      padding: 0 0.8rem;
+
+      > .logo {
+        font-size: 1.5rem; // Smallest logo size
+      }
+
+      > .hamburger {
+        font-size: 1.5rem; // Adjust icon size for small screens
+      }
+    }
+
+    .nav-menu {
+      top: 8vh; // Align dropdown with compact header
+      padding: 0.5rem 0;
+
+      > li {
+        margin: 0.5rem 0;
+
+        > a {
+          font-size: 1.1rem; // Compact font size for small devices
+        }
+      }
+    }
+  }
 }

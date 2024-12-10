@@ -6,11 +6,12 @@
   align-items: center;
   background-color: $color4;
   overflow: hidden;
+
   .container {
-    flex: 1; // Makes it flexible for responsiveness
-    max-width: 600px; // Limits the content width
+    flex: 1; // Ensures flexibility for responsiveness
+    max-width: 600px; // Constrains content width for readability
     height: auto;
-    padding: 2rem; // Added padding for a cleaner layout
+    padding: 2rem; // Adds consistent spacing
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,6 +22,7 @@
       font-weight: 500;
       color: $color5;
       margin-bottom: 1rem;
+      text-align: center; // Centers heading text for better mobile experience
     }
 
     p {
@@ -34,40 +36,55 @@
   }
 
   .imgDiv {
-    flex: 1; // Flexes to balance with the container
+    flex: 1; // Balances space with the container
     height: 100%;
-    background: url("/public/images/image\ copy\ 5.png")
+    background: url("/public/images/image copy 5.png")
       no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
 
     @media (max-width: 768px) {
-      background-attachment: scroll; // Fixed background can cause issues on mobile
+      background-attachment: scroll; // Adjusts for smoother mobile experience
     }
   }
 
   // Responsive Design
   @media (max-width: 1024px) {
-    flex-direction: column;
-    height: auto;
+    flex-direction: column; // Stacks the elements vertically
+    height: auto; // Allows content height to adjust naturally
 
     .container {
-      padding: 1.5rem;
+      padding: 1.5rem; // Slightly reduces padding for smaller screens
     }
 
     .imgDiv {
-      height: 300px; // Adjust height for smaller screens
+      height: 300px; // Adjusts the image height
     }
   }
 
   @media (max-width: 768px) {
     .container {
+      padding: 1rem; // Adds consistent spacing on mobile
       h2 {
-        font-size: 2rem; // Scaled font sizes for mobile
+        font-size: 2rem; // Adjusts heading size for mobile
       }
       p {
-        font-size: 1rem;
-        padding: 1rem;
+        font-size: 1rem; // Adjusts paragraph size for better readability
+      }
+    }
+
+    .imgDiv {
+      height: 200px; // Further reduces image height for smaller screens
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      h2 {
+        font-size: 1.8rem; // Further scaling for very small screens
+      }
+      p {
+        font-size: 0.9rem; // Adapts for compact screen space
       }
     }
   }
