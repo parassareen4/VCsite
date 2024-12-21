@@ -6,8 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/public/images/image\ copy\ 3.png") 
-    no-repeat center center;
+  background: url("/public/images/image\ copy\ 3.png") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 2rem 0;
@@ -32,27 +31,41 @@
       text-align: center;
     }
 
-    ul {
-      font-size: 1.4rem;
-      color: $color5;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      text-align: center;
-      line-height: 1.8;
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
       width: 100%;
 
-      li {
-        margin: 1rem 0;
-        letter-spacing: 2px;
-        transition: transform 0.2s ease, color 0.3s ease;
-        cursor: pointer;
+      .column {
+        ul {
+          font-size: 1.4rem;
+          color: $color5;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          text-align: center;
+          line-height: 1.8;
+          width: 100%;
 
-        &:hover {
-          transform: translateY(-3px);
-          color: lighten($color4, 10%);
-          cursor: pointer;
-          transition: transform 0.2s ease, color 0.3s ease;
+          li {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius:20px;
+            width: 100%;
+            display: inline-block;
+            margin: 2rem 0;
+            letter-spacing: 2px;
+            transition: transform 0.2s ease, color 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+              transform: translateY(-3px);
+              color: lighten($color4, 10%);
+              cursor: pointer;
+              transition: transform 0.2s ease, color 0.3s ease;
+            }
+          }
         }
       }
     }
@@ -61,7 +74,7 @@
   // Tablet Styles
   @media screen and (max-width: 1024px) {
     background-attachment: scroll; // Disable fixed background on tablets
-
+    
     .container {
       width: 90%;
       padding: 1.5rem;
@@ -70,8 +83,12 @@
         font-size: 2.4rem;
       }
 
-      ul {
-        font-size: 1.2rem;
+      .services-grid {
+        gap: 1.5rem;
+
+        .column ul {
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -91,13 +108,19 @@
         margin-bottom: 1.5rem;
       }
 
-      ul {
-        font-size: 1rem;
-        line-height: 1.6;
+      .services-grid {
+        grid-template-columns: 1fr; // Stack columns on mobile
+        gap: 1rem;
 
-        li {
-          margin: 0.8rem 0;
-          letter-spacing: 1px;
+        .column ul {
+          font-size: 1rem;
+          line-height: 1.6;
+          text-align: center; // Center text on mobile
+
+          li {
+            margin: 0.8rem 0;
+            letter-spacing: 1px;
+          }
         }
       }
     }
@@ -115,7 +138,7 @@
         margin-bottom: 1rem;
       }
 
-      ul {
+      .services-grid .column ul {
         font-size: 0.9rem;
         line-height: 1.5;
 
