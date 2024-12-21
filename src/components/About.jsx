@@ -5,9 +5,9 @@ const About = () => {
     <section id="about" className="about">
       <div className="container">
         <h2>About Us</h2>
-        <p>
-        We are a leading venture capital firm specializing in investing in groundbreaking sales software companies. Our mission is to accelerate innovation and drive growth for the next generation of sales technology. We partner with visionary founders and provide the capital, resources, and strategic guidance needed to turn bold ideas into industry-leading solutions. From AI-driven CRMs to sales enablement platforms, we empower companies to transform how the world sells.
-        </p>
+        <p>The Closers Fund is a premier sales training company dedicated to helping students and entrepreneurs master sales and scale their businesses. Offering tailored programs for all entrepreneurial stages, they provide practical tools and strategies to boost confidence, optimize sales processes, and achieve goals.
+<br/><br/>
+With a focus on real-world techniques, The Closers Fund teaches participants to build relationships, close deals effectively, and thrive in today’s marketplace. Graduates consistently report increased revenue, improved communication, and enhanced client confidence, paving the way for sustained success.</p>
       </div>
       <div className="imgDiv"></div>
     </section>
